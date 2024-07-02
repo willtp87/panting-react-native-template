@@ -18,9 +18,10 @@ export const timeInAppSlice = createSlice({
     increment: (state) => {
       state.value += 1;
     },
-    decrement: (state) => {
-      state.value -= 1;
+    reset: (state) => {
+      state.value = initialState.value;
     },
+    // Payload example.
     incrementByAmount: (state, action: PayloadAction<number>) => {
       state.value += action.payload;
     },
@@ -28,7 +29,6 @@ export const timeInAppSlice = createSlice({
 });
 
 // Exports.
-export const { increment, decrement, incrementByAmount } =
-  timeInAppSlice.actions;
+export const { increment, reset, incrementByAmount } = timeInAppSlice.actions;
 export const selectCount = (state: RootState) => state.timeInApp.value;
 export default timeInAppSlice.reducer;
