@@ -1,5 +1,7 @@
 {
     "helloWorld": "Panting dépôt de modèles.",
     "timeInApp": "Temps passé dans l'application: {{timeInApp}}",
+    "settingsTitle": "Paramètres",
+    "darkMode": "Mode sombre:",
     "mainTitle": "Principal"
 }

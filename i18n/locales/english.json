@@ -1,5 +1,7 @@
 {
     "helloWorld": "Panting template repo!",
     "timeInApp": "Time in app: {{timeInApp}}",
+    "settingsTitle": "Settings",
+    "darkMode": "Dark mode:",
     "mainTitle": "Main"
 }

@@ -3,6 +3,10 @@
 This a template repo for testing out React Native development for IOS.
 [Documentation](https://willtp87.github.io/panting-react-native-template/)
 
+## App Docs
+
+* [Configuration](./docs/config.md)
+
 ## Maintainers
 
 * [William Panting](https://github.com/willtp87)
@@ -18,6 +22,7 @@ If you would like to contribute to this repo create an issue or pull request.
 * [React Native Elements](https://reactnativeelements.com/docs)
 * [i18next](https://www.i18next.com/)
 * [Redux Toolkit](https://redux-toolkit.js.org/)
+* [Redux Persist](https://www.npmjs.com/package/redux-persist)
 
 ### Building
 
