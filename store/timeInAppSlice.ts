@@ -2,6 +2,8 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 import type { RootState } from ".";
 
+// Time spent in the app.
+
 // Typing for `state`.
 interface timeInAppState {
   value: number;
