@@ -23,7 +23,7 @@ export default function Page() {
     <ScrollView
       contentContainerStyle={{
         flex: 1,
-        justifyContent: "center",
+        margin: 25,
       }}
     >
       <Text>{t("darkMode")}</Text>
