@@ -37,7 +37,7 @@
     "typescript": "^5.5.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.24.9",
+    "@babel/core": "^7.25.2",
     "@testing-library/jest-dom": "^6.4.8",
     "@testing-library/react-native": "^12.5.2",
     "@types/jest": "^29.5.12",
