@@ -4,7 +4,8 @@ import { StatusBar } from "expo-status-bar";
 import React, { useEffect } from "react";
 import "../i18n/i18n";
 import { useTranslation } from "react-i18next";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 import TimeInApp from "../components/TimeInApp";
 
@@ -19,7 +20,7 @@ export default function Index() {
   }, [t, navigation]);
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text>{t("helloWorld")}</Text>
       <StatusBar style="auto" />
       <TimeInApp />
@@ -28,7 +29,7 @@ export default function Index() {
         type="material"
         onPress={() => router.push("/settings")}
       />
-    </View>
+    </SafeAreaView>
   );
 }
 
