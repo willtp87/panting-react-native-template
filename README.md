@@ -7,6 +7,10 @@ This a template repo for testing out React Native development for IOS.
 
 * [Configuration](./docs/config.md)
 
+## Contribute
+
+This is an open source project you can help develop it or contribute to [Patreon](https://www.patreon.com/WilliamPanting).
+
 ## Maintainers
 
 * [William Panting](https://github.com/willtp87)
