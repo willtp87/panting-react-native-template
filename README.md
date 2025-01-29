@@ -55,7 +55,7 @@ This project uses Jest and has associated scripts.
 
 ## Privacy
 
-* [Policy](./docs/privacyPolicy.md)
+[Policy](./docs/privacyPolicy.md)
 
 ## License
 
