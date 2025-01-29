@@ -53,6 +53,10 @@ This project uses Jest and has associated scripts.
 * github workflows
 * vscode tasks
 
+## Privacy
+
+* [Policy](./docs/privacyPolicy.md)
+
 ## License
 
 [GPLv3](http://www.gnu.org/licenses/gpl-3.0.txt)
