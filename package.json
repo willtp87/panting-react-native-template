@@ -10,7 +10,7 @@
     "ios": "expo start --ios"
   },
   "dependencies": {
-    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-env": "^7.26.8",
     "@react-native-async-storage/async-storage": "^2",
     "@reduxjs/toolkit": "^2.5.0",
     "@rneui/base": "4.0.0-rc.7",
