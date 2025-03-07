@@ -1,9 +1,8 @@
 import {
-  ThemeProvider as NavThemeProvider,
+  ThemeProvider,
   DarkTheme,
   DefaultTheme,
 } from "@react-navigation/native";
-import { ThemeProvider, createTheme } from "@rneui/themed";
 import { Stack } from "expo-router";
 import React from "react";
 import "intl-pluralrules";
@@ -16,21 +15,11 @@ import withStore from "../store/withStore";
 // Top-level component.
 const Wrapper = function App() {
   const settings = useAppSelector(selectSettings);
-  const theme = createTheme({
-    components: {
-      Button: {
-        style: { padding: 10 },
-      },
-    },
-    mode: settings.darkTheme ? "dark" : "light",
-  });
 
   return (
-    <NavThemeProvider value={settings.darkTheme ? DarkTheme : DefaultTheme}>
-      <ThemeProvider theme={theme}>
-        <Stack />
-      </ThemeProvider>
-    </NavThemeProvider>
+    <ThemeProvider value={settings.darkTheme ? DarkTheme : DefaultTheme}>
+      <Stack />
+    </ThemeProvider>
   );
 };
 

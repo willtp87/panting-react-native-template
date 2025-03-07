@@ -1,3 +1,4 @@
+import { ThemeProvider, DefaultTheme } from "@react-navigation/native";
 import { render, screen, act } from "@testing-library/react-native";
 import React from "react";
 import { Provider } from "react-redux";
@@ -8,9 +9,11 @@ import { store } from "../../store";
 describe("<TimeInApp />", () => {
   it("increments the timer each second", () => {
     render(
-      <Provider store={store}>
-        <TimeInApp />
-      </Provider>,
+      <ThemeProvider value={DefaultTheme}>
+        <Provider store={store}>
+          <TimeInApp />
+        </Provider>
+      </ThemeProvider>,
     );
     expect(screen.getByText("0", { exact: false }));
 
@@ -38,9 +41,11 @@ describe("<TimeInApp />", () => {
   it("clears the interval when the component is unmounted", () => {
     const clearIntervalMock = jest.spyOn(window, "clearInterval");
     const { unmount } = render(
-      <Provider store={store}>
-        <TimeInApp />
-      </Provider>,
+      <ThemeProvider value={DefaultTheme}>
+        <Provider store={store}>
+          <TimeInApp />
+        </Provider>
+      </ThemeProvider>,
     );
 
     unmount();

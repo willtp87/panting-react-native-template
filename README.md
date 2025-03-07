@@ -23,7 +23,6 @@ If you would like to contribute to this repo create an issue or pull request.
 
 * [Expo](https://expo.dev/)
 * [Expo Router](https://docs.expo.dev/router/introduction/)
-* [React Native Elements](https://reactnativeelements.com/docs)
 * [i18next](https://www.i18next.com/)
 * [Redux Toolkit](https://redux-toolkit.js.org/)
 * [Redux Persist](https://www.npmjs.com/package/redux-persist)

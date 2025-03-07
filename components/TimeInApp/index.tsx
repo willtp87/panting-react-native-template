@@ -1,7 +1,8 @@
-import { Text } from "@rneui/themed";
+import { useTheme } from "@react-navigation/native";
 import React, { useEffect } from "react";
 import "../../i18n/i18n";
 import { useTranslation } from "react-i18next";
+import { Text } from "react-native";
 
 import { useAppSelector, useAppDispatch } from "../../store/hooks";
 import { increment, selectCount } from "../../store/timeInAppSlice";
@@ -11,6 +12,7 @@ export default function TimeInApp() {
   const { t } = useTranslation();
   const timeInApp = useAppSelector(selectCount);
   const dispatch = useAppDispatch();
+  const { colors } = useTheme();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -20,5 +22,7 @@ export default function TimeInApp() {
     return () => clearInterval(interval);
   }, [dispatch]);
 
-  return <Text>{t("timeInApp", { timeInApp })}</Text>;
+  return (
+    <Text style={{ color: colors.text }}>{t("timeInApp", { timeInApp })}</Text>
+  );
 }

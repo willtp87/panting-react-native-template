@@ -1,10 +1,11 @@
-import { Text, Icon } from "@rneui/themed";
+import AntDesign from "@expo/vector-icons/AntDesign";
+import { useTheme } from "@react-navigation/native";
 import { useNavigation, useRouter } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import React, { useEffect } from "react";
 import "../i18n/i18n";
 import { useTranslation } from "react-i18next";
-import { StyleSheet } from "react-native";
+import { StyleSheet, Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import TimeInApp from "../components/TimeInApp";
@@ -14,6 +15,7 @@ export default function Index() {
   const { t } = useTranslation();
   const navigation = useNavigation();
   const router = useRouter();
+  const { colors } = useTheme();
 
   useEffect(() => {
     navigation.setOptions({ title: t("mainTitle") });
@@ -21,13 +23,16 @@ export default function Index() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text>{t("helloWorld")}</Text>
+      <Text style={{ color: colors.text }}>{t("helloWorld")}</Text>
       <StatusBar style="auto" />
       <TimeInApp />
-      <Icon
-        name="settings"
-        type="material"
+      <AntDesign.Button
+        name="setting"
+        size={24}
+        color={colors.text}
+        backgroundColor={colors.background}
         onPress={() => router.push("/settings")}
+        testID="settings"
       />
     </SafeAreaView>
   );

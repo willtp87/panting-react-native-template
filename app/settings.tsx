@@ -1,8 +1,8 @@
-import { Switch, Text } from "@rneui/themed";
+import { useTheme } from "@react-navigation/native";
 import { useNavigation } from "expo-router";
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { ScrollView } from "react-native";
+import { ScrollView, Text, Switch } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { useAppSelector, useAppDispatch } from "../store/hooks";
@@ -15,6 +15,7 @@ export default function Page() {
   const navigation = useNavigation();
   const settings = useAppSelector(selectSettings);
   const dispatch = useAppDispatch();
+  const { colors } = useTheme();
 
   useEffect(() => {
     navigation.setOptions({ title: t("settingsTitle") });
@@ -27,7 +28,7 @@ export default function Page() {
           padding: 15,
         }}
       >
-        <Text>{t("darkMode")}</Text>
+        <Text style={{ color: colors.text }}>{t("darkMode")}</Text>
         <Switch
           value={settings.darkTheme}
           onValueChange={(value) => {
